@@ -1,0 +1,79 @@
+.cart {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  height: 70vh;
+  overflow-y: auto;
+  background: linear-gradient(135deg, #429ebd, #eaeaea); 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cart h2 {
+  text-align: center; 
+  margin-bottom: 15px;
+}
+
+.empty-cart {
+  text-align: center; 
+  color: #000;
+  font-style: italic;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd; 
+  border-radius: 4px;
+  transition: transform 0.2s ease; 
+}
+
+.cart-item:hover {
+  transform: scale(1.02); 
+}
+
+.item-name {
+  flex: 1; 
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+}
+
+.quantity-control button {
+  margin: 0 5px;
+  background-color: #f27f0c; 
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px; 
+  border-radius: 4px; 
+  transition: background-color 0.3s ease; 
+}
+
+.quantity-control button:hover {
+  background-color: #f7ad19; 
+}
+
+.item-total {
+  min-width: 80px; 
+  text-align: right;
+  margin-right: 5px; 
+}
+
+.remove-button {
+  background-color: #053f5c; 
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px; 
+  border-radius: 4px; 
+  transition: background-color 0.3s ease; 
+}
+
+.remove-button:hover {
+  background-color: #e53935; 
+}
