@@ -1,3 +1,5 @@
+// controllers/userController.js
+
 const userModel = require('../models/userModel');
 
 const getUser = (req, res) => {
@@ -29,6 +31,11 @@ const loginUser = (req, res) => {
 
 const registerUser = (req, res) => {
     const { email, password, name, phone_number, birth_date, role } = req.body;
+
+    // Ensure the role is valid (e.g., 'admin' for admin registration)
+    if (!['patron', 'user'].includes(role)) {
+        return res.status(400).json({ error: 'Invalid role' });
+    }
 
     userModel.registerUser(email, password, name, phone_number, birth_date, role, (err, userId) => {
         if (err) {

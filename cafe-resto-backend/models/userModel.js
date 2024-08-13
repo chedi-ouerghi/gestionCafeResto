@@ -29,9 +29,22 @@ const getUserById = (userId, callback) => {
     });
 };
 
-
+const registerUser = (email, password, name, phone_number, birth_date, role, callback) => {
+    // Hashing the password
+    bcrypt.hash(password, 10, (err, hashedPassword) => {
+        if (err) return callback(err);
+        
+        // Inserting new user into the database
+        const query = 'INSERT INTO users (email, password, name, phone_number, birth_date, role) VALUES (?, ?, ?, ?, ?, ?)';
+        db.query(query, [email, hashedPassword, name, phone_number, birth_date, role], (err, results) => {
+            if (err) return callback(err);
+            callback(null, results.insertId); // Return the new user ID
+        });
+    });
+};
 
 module.exports = {
     getUserById,
-    authenticateUser
+    authenticateUser,
+    registerUser
 };

@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const routes = require('./routes');
+const adminRouter = require('./admin/admin');
 require('dotenv').config();
 
 const app = express();
@@ -17,6 +18,8 @@ app.use(cors(corsOptions));
 
 app.use(bodyParser.json());
 app.use('/api', routes);
+app.use('/admin', adminRouter);
+
 
 app.listen(port, () => {
     console.log(`Server running on port ${port}`);

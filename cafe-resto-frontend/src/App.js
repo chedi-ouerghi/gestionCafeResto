@@ -5,6 +5,9 @@ import HomePage from './components/HomePage';
 import LoginPage from './components/LoginPage';
 import LandingPage from './components/LandingPage';  
 import './App.css';
+import StatisticsPage from './admin/StatisticsPage';
+import HomePageAd from './admin/HomePageAd';
+import PrivateRoute from './components/PrivateRoute';
 
 function App() {
     const [user, setUser] = useState(null);
@@ -15,17 +18,15 @@ function App() {
         if (userName && userRole) {
             setUser({ name: userName, role: userRole });
         }
-    }, []);
+    }, []); // Assurez-vous que le tableau de dépendances est vide pour éviter les appels récursifs
 
     const handleLogin = (user) => {
-        console.log("User after login:", user);  
         setUser(user);
         localStorage.setItem('userName', user.name);
         localStorage.setItem('userRole', user.role);
     };
 
     const handleLogout = () => {
-        console.log("User after logout:", user);  
         setUser(null);
         localStorage.removeItem('userName');
         localStorage.removeItem('userRole');
@@ -37,18 +38,11 @@ function App() {
             <div className="application">
                 <Navbar user={user} onLogout={handleLogout} />
                 <Routes>
-                    <Route 
-                        path="/" 
-                        element={<LandingPage />}  
-                    />
-                    <Route 
-                        path="/home" 
-                        element={user ? <HomePage user={user} onLogout={handleLogout} /> : <Navigate to="/login" />} 
-                    />
-                    <Route 
-                        path="/login" 
-                        element={user ? <Navigate to="/home" /> : <LoginPage onLogin={handleLogin} />} 
-                    />
+                    <Route path="/" element={<LandingPage />} />
+                    <Route path="/home"  element={<HomePage user={user} onLogout={handleLogout} />} user={user}  />
+                    <Route path="/login" element={user ? <Navigate to="/home" /> : <LoginPage onLogin={handleLogin} />} />
+                    <Route path="/homeAd" element={<PrivateRoute element={<HomePageAd user={user} onLogout={handleLogout} />} user={user} requiredRole="patron" />} />
+                    <Route path="/statistics" element={<PrivateRoute element={<StatisticsPage />} user={user} requiredRole="patron" />} />
                 </Routes>
             </div>
         </Router>
