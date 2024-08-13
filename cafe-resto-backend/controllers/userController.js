@@ -8,18 +8,39 @@ const getUser = (req, res) => {
     });
 };
 
-
 const loginUser = (req, res) => {
     const { email, password } = req.body;
     
+    console.log('Login attempt:', { email }); // Ajout de log
+
     userModel.authenticateUser(email, password, (err, user) => {
-        if (err) return res.status(500).json({ error: err.message });
-        if (!user) return res.status(401).json({ message: 'Invalid email or password' });
+        if (err) {
+            console.error('Error during authentication:', err); // Log d'erreur
+            return res.status(500).json({ error: err.message });
+        }
+        if (!user) {
+            console.log('Invalid email or password'); // Log d'information
+            return res.status(401).json({ message: 'Invalid email or password' });
+        }
+        console.log('Login successful:', user); // Log de succès
         res.json({ message: 'Login successful', user });
+    });
+};
+
+const registerUser = (req, res) => {
+    const { email, password, name, phone_number, birth_date, role } = req.body;
+
+    userModel.registerUser(email, password, name, phone_number, birth_date, role, (err, userId) => {
+        if (err) {
+            console.error('Error during registration:', err); // Log d'erreur
+            return res.status(500).json({ error: err.message });
+        }
+        res.status(201).json({ message: 'User registered successfully', userId });
     });
 };
 
 module.exports = {
     getUser,
     loginUser,
+    registerUser
 };
