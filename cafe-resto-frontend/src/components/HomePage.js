@@ -64,7 +64,7 @@ function HomePage() {
             items: cart.map(item => ({
                 product_id: item.product_id,
                 quantity: item.quantity
-                // size a été supprimé ici
+                
             }))
         };
 
@@ -93,9 +93,9 @@ function HomePage() {
     }, []);
 
     const handleCloseTicket = () => {
-        // Réinitialiser le panier
+        
         setCart([]);
-        // Cacher le ticket
+        
         setShowTicket(false);
     };
 

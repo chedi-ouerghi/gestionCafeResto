@@ -3,7 +3,6 @@ const productModel = require('../models/product');
 const createProduct = (req, res) => {
     const product = req.body;
 
-    // Assurez-vous que le produit contient toutes les informations nécessaires
     if (!product.name || typeof product.price !== 'number' || typeof product.quantity !== 'number' || !product.type) {
         return res.status(400).json({ error: 'Invalid product data. name, price, quantity, and type are required.' });
     }

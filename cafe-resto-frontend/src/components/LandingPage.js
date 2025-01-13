@@ -45,7 +45,7 @@ const LandingPage = () => {
       </section>
 
         <div className="content" style={{
-    backgroundColor: '#3a3a3a', // Couleur de fond du contenu sombre
+    backgroundColor: '#3a3a3a', 
     borderRadius: '8px',
     margin: '1%',
   }}>
@@ -79,7 +79,7 @@ const LandingPage = () => {
       </div>
 
       <section className="features-section" style={{
-    backgroundColor: '#4a4a4a', // Couleur de fond des fonctionnalités sombre
+    backgroundColor: '#4a4a4a', 
     borderRadius: '8px',
     margin: '1%',
   }}>
@@ -101,7 +101,7 @@ const LandingPage = () => {
       </section>
 
         <section className="partners-section" style={{
-    backgroundColor: '#595959', // Couleur de fond des partenaires sombre
+    backgroundColor: '#595959', 
     borderRadius: '8px',
     margin: '1%',
   }}>
@@ -139,7 +139,7 @@ const LandingPage = () => {
       </section>
 
         <section className="juice-section" style={{
-    backgroundColor: '#6b6b6b', // Couleur de fond des jus sombre
+    backgroundColor: '#6b6b6b', 
     borderRadius: '8px',
     margin: '1%',
   }}>
@@ -164,7 +164,7 @@ const LandingPage = () => {
       </section>
 
       <section className="services-section" style={{
-    backgroundColor: '#7a7a7a', // Couleur de fond des services sombre
+    backgroundColor: '#7a7a7a', 
     borderRadius: '8px',
     margin: '1%',
   }}>
@@ -207,16 +207,16 @@ const LandingPage = () => {
       <div className="social-media">
         <p>Connect with us :</p>
         <div className="social-icons">
-          <a href="#">
+          <a href="oo">
             <i className="fab fa-facebook-f" />
           </a>
-          <a href="#">
+          <a href="oo">
             <i className="fab fa-twitter" />
           </a>
-          <a href="#">
+          <a href="oo">
             <i className="fab fa-instagram" />
           </a>
-          <a href="#">
+          <a href="oo">
             <i className="fab fa-linkedin-in" />
           </a>
         </div>
@@ -255,15 +255,15 @@ const LandingPage = () => {
 
 
        <footer className="footer" style={{
-    backgroundColor: '#111', // Couleur de fond du pied de page sombre
-    color: '#ccc', // Couleur du texte dans le pied de page
+    backgroundColor: '#111', 
+    color: '#ccc', 
     borderRadius: '8px',
     margin: '1%',
   }}>
-        <p>TestyFD est disponible pour Android et Apple.</p>
+        <p>RestoCafé est disponible pour Android et Apple.</p>
         <div className="app-links">
-          <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/></svg></a>
-          <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM127 384.5c-5.5 9.6-17.8 12.8-27.3 7.3-9.6-5.5-12.8-17.8-7.3-27.3l14.3-24.7c16.1-4.9 29.3-1.1 39.6 11.4L127 384.5zm138.9-53.9H84c-11 0-20-9-20-20s9-20 20-20h51l65.4-113.2-20.5-35.4c-5.5-9.5-2.3-21.8 7.2-27.3 9.5-5.5 21.8-2.3 27.3 7.2l19.8 34.4 78.1-135.5c6.6-11.4 20.9-15.4 32.3-8.8s15.4 20.9 8.8 32.3l-78.1 135.5 47.6 81.4c6.4 11 2.6 24.7-8.7 31.1-11 6.4-24.7 2.6-31.1-8.7l-47.6-81.4zm126.3 75.3c-9.5 5.5-21.8 2.3-27.3-7.2L231.3 288c-10.3-12.5-23.5-16.3-39.6-11.4l-14.3 24.7c-5.5 9.6-17.8 12.8-27.3 7.3-9.6-5.5-12.8-17.8-7.3-27.3l14.3-24.7c16.1-4.9 29.3-1.1 39.6 11.4l32.1 55.8 32.2-55.8c10.3-12.5 23.5-16.3 39.6-11.4l14.3 24.7c5.5 9.6 2.3 21.8-7.3 27.3zM400 432H48V80h352v352z"/></svg></a>
+          <a href="oo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/></svg></a>
+          <a href="oo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM127 384.5c-5.5 9.6-17.8 12.8-27.3 7.3-9.6-5.5-12.8-17.8-7.3-27.3l14.3-24.7c16.1-4.9 29.3-1.1 39.6 11.4L127 384.5zm138.9-53.9H84c-11 0-20-9-20-20s9-20 20-20h51l65.4-113.2-20.5-35.4c-5.5-9.5-2.3-21.8 7.2-27.3 9.5-5.5 21.8-2.3 27.3 7.2l19.8 34.4 78.1-135.5c6.6-11.4 20.9-15.4 32.3-8.8s15.4 20.9 8.8 32.3l-78.1 135.5 47.6 81.4c6.4 11 2.6 24.7-8.7 31.1-11 6.4-24.7 2.6-31.1-8.7l-47.6-81.4zm126.3 75.3c-9.5 5.5-21.8 2.3-27.3-7.2L231.3 288c-10.3-12.5-23.5-16.3-39.6-11.4l-14.3 24.7c-5.5 9.6-17.8 12.8-27.3 7.3-9.6-5.5-12.8-17.8-7.3-27.3l14.3-24.7c16.1-4.9 29.3-1.1 39.6 11.4l32.1 55.8 32.2-55.8c10.3-12.5 23.5-16.3 39.6-11.4l14.3 24.7c5.5 9.6 2.3 21.8-7.3 27.3zM400 432H48V80h352v352z"/></svg></a>
         </div>
       </footer>
 

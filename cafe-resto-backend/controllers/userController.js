@@ -13,18 +13,18 @@ const getUser = (req, res) => {
 const loginUser = (req, res) => {
     const { email, password } = req.body;
     
-    console.log('Login attempt:', { email }); // Ajout de log
+    console.log('Login attempt:', { email }); 
 
     userModel.authenticateUser(email, password, (err, user) => {
         if (err) {
-            console.error('Error during authentication:', err); // Log d'erreur
+            console.error('Error during authentication:', err); 
             return res.status(500).json({ error: err.message });
         }
         if (!user) {
-            console.log('Invalid email or password'); // Log d'information
+            console.log('Invalid email or password'); 
             return res.status(401).json({ message: 'Invalid email or password' });
         }
-        console.log('Login successful:', user); // Log de succès
+        console.log('Login successful:', user); 
         res.json({ message: 'Login successful', user });
     });
 };
@@ -39,7 +39,7 @@ const registerUser = (req, res) => {
 
     userModel.registerUser(email, password, name, phone_number, birth_date, role, (err, userId) => {
         if (err) {
-            console.error('Error during registration:', err); // Log d'erreur
+            console.error('Error during registration:', err);
             return res.status(500).json({ error: err.message });
         }
         res.status(201).json({ message: 'User registered successfully', userId });

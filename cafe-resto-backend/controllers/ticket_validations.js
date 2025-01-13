@@ -8,13 +8,11 @@ const createTicketValidation = (req, res) => {
         return res.status(400).json({ error: 'Invalid request body. user_id and items array are required.' });
     }
 
-    // Appel du modèle pour créer la validation du ticket
     ticketValidationModel.createTicketValidation({ user_id, items }, (err, result) => {
         if (err) {
             return res.status(500).json({ error: err.message });
         }
 
-        // Répondre avec un message de succès et les détails de validation
         res.status(201).json(result);
     });
 };

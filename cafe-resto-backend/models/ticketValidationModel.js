@@ -14,7 +14,6 @@ const createTicketValidation = (ticket, callback) => {
         quantity: item.quantity
     })));
 
-    // Appel à la procédure stockée dans la base de données
     db.query('CALL CreateTicketValidation(?, ?)', [user_id, itemsJson], (err, results) => {
         if (err) return callback(err);
 
@@ -24,8 +23,8 @@ const createTicketValidation = (ticket, callback) => {
         }
 
         // Traitement des résultats
-        const ticketDetails = results[0] || []; // Le premier jeu de résultats contient les détails du ticket
-        const totalAmountResult = results[1][0]; // Le second jeu de résultats contient le montant total
+        const ticketDetails = results[0] || []; 
+        const totalAmountResult = results[1][0]; 
         const totalAmount = totalAmountResult ? totalAmountResult.total_amount : 0;
 
         callback(null, {
